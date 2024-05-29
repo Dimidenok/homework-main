@@ -5,7 +5,7 @@
       "cats": [
         {
           "id": 14978,
-          "name": "Кот №1",
+          "name": "Котик №1 - стаб №1",
           "description": "Кот №1",
           "tags": null,
           "gender": "unisex",
@@ -22,7 +22,7 @@
       "cats": [
         {
           "id": 15955,
-          "name": "Кот №2",
+          "name": "Котик №2 - стаб №2",
           "description": "Кот №2",
           "tags": null,
           "gender": "female",
@@ -39,7 +39,7 @@
       "cats": [
         {
           "id": 15103,
-          "name": "Кот №3",
+          "name": "Котик №2 - стаб №2",
           "description": "Кот №3",
           "tags": null,
           "gender": "unisex",

@@ -13,6 +13,8 @@ private extension String {
     static let addButtonLabel = "Добавить"
     static let mainScreenIdentifier = "searchScreenViewController" 
     static let rating = "Рейтинг"
+    static let allNames = "Все имена"
+    static let searchIdentifier = "Поиск"
 }
 
 final class MeowleSearchCatPage: BasePage {
@@ -24,6 +26,8 @@ final class MeowleSearchCatPage: BasePage {
     private lazy var addButton = app.buttons[.addButtonLabel]
     private lazy var mainScreenTitle = app.otherElements[.mainScreenIdentifier]
     private lazy var ratingButton = app.buttons[.rating]
+    private lazy var allNamesButton = app.buttons[.allNames]
+    private lazy var searchButton = app.buttons[.searchIdentifier]
     
     // MARK: - Actions
     
@@ -41,10 +45,24 @@ final class MeowleSearchCatPage: BasePage {
         return self
     }
     
-    // Тап по кнопке "Поиск"
+    // Тап по полю "Поиск"
     @discardableResult
     func tapSearchField() -> MeowleSearchCatPage {
         searchField.tap()
+        return self
+    }
+    
+    // Тап по кнопке "Поиска"
+    @discardableResult
+    func tapSearchButton() -> MeowleSearchCatPage {
+        searchButton.tap()
+        return self
+    }
+    
+    // Тап по кнопке "Все имена"
+    @discardableResult
+    func tapAllNamesButton() -> MeowleSearchCatPage {
+        allNamesButton.tap()
         return self
     }
     

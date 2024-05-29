@@ -122,6 +122,8 @@ final class CatViewController: UIViewController {
         descriptionView.textColor = cat.description == nil ? .darkGray : .label
         likesButton.setTitle("👍 " + String(cat.likes), for: .normal)
         dislikesButton.setTitle("👎 " + String(cat.dislikes), for: .normal)
+        likesButton.accessibilityIdentifier = "likesButton"
+        dislikesButton.accessibilityIdentifier = "dislikeButton"
         likesButton.addTarget(self, action: #selector(didTapLike), for: .touchUpInside)
         dislikesButton.addTarget(self, action: #selector(didTapLike), for: .touchUpInside)
         newCatInfo.isHidden = !isNew
@@ -180,6 +182,7 @@ final class CatViewController: UIViewController {
         let settingsImage = UIImage(systemName: "star.fill")
         let button = UIButton(type: .system)
         button.setImage(settingsImage, for: .normal)
+        button.accessibilityIdentifier = "favouriteButton"
         button.addTarget(self, action: #selector(didTapFavButton), for: .touchUpInside)
         
         let menuBarItem = UIBarButtonItem(customView: button)
